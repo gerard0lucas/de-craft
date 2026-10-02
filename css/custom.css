@@ -2271,7 +2271,7 @@ header.main-header .header-sticky.active .navbar {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    padding: 200px 0 140px;
+    padding: 108px 0 36px;
     margin-top: -70px;
 }
 
@@ -2296,11 +2296,11 @@ header.main-header .header-sticky.active .navbar {
 
 .page-header-box h1 {
     display: inline-block;
-    font-size: 80px;
+    font-size: 42px;
     font-weight: 700;
     color: var(--white-color);
     letter-spacing: -0.02em;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     cursor: none;
 }
 
@@ -2311,7 +2311,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .page-header-box ol li.breadcrumb-item {
-    font-size: 22px;
+    font-size: 16px;
     text-transform: capitalize;
     color: var(--white-color);
 }
@@ -2321,7 +2321,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .page-header-box ol .breadcrumb-item+.breadcrumb-item::before {
-    font-size: 20px;
+    font-size: 14px;
     color: var(--white-color);
 }
 
@@ -4082,17 +4082,17 @@ header.main-header .header-sticky.active .navbar {
         padding: 20px 0;
     }
     .page-header {
-        padding: 160px 0 100px;
+        padding: 96px 0 28px;
         margin-top: -64px;
     }
     .page-header-box h1 {
-        font-size: 50px;
+        font-size: 32px;
     }
     .page-header-box ol li.breadcrumb-item {
-        font-size: 18px;
+        font-size: 15px;
     }
     .page-header-box ol .breadcrumb-item+.breadcrumb-item::before {
-        font-size: 16px;
+        font-size: 13px;
     }
     .about-facility-list {
         margin-top: 50px;
@@ -4563,15 +4563,19 @@ header.main-header .header-sticky.active .navbar {
     .footer-copyright {
         padding: 15px 0;
     }
+    .page-header {
+        padding: 88px 0 24px;
+        margin-top: -60px;
+    }
     .page-header-box h1 {
-        font-size: 28px;
-        margin-bottom: 5px;
+        font-size: 26px;
+        margin-bottom: 4px;
     }
     .page-header-box ol li.breadcrumb-item {
-        font-size: 16px;
+        font-size: 14px;
     }
     .page-header-box ol .breadcrumb-item+.breadcrumb-item::before {
-        font-size: 14px;
+        font-size: 12px;
     }
     .about-facility-item {
         width: 100%;
@@ -4695,5 +4699,318 @@ header.main-header .header-sticky.active .navbar {
     }
     .error-page-image img {
         max-width: 100%;
+    }
+}
+
+/************************************/
+
+/***   Works portfolio (projects) ***/
+
+/************************************/
+
+.works-intro {
+    max-width: 720px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.works-intro .section-title {
+    margin-bottom: 20px;
+}
+
+.works-intro p {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.works-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.works-filter button {
+    appearance: none;
+    border: 1px solid var(--divider-color);
+    background: transparent;
+    color: var(--primary-color);
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.works-filter button:hover,
+.works-filter button.is-active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.work-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 0;
+    border: 0;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.work-card-image {
+    margin: 0;
+    overflow: hidden;
+}
+
+.work-card-image img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 0.6s ease;
+}
+
+.work-card:hover .work-card-image img {
+    transform: scale(1.06);
+}
+
+.work-card-meta {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 80px 28px 24px;
+    background: linear-gradient(180deg, rgba(25, 35, 36, 0) 0%, rgba(25, 35, 36, 0.92) 70%);
+    color: var(--white-color);
+}
+
+.work-card-meta span {
+    display: inline-block;
+    color: var(--accent-color);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.work-card-meta h2 {
+    color: var(--white-color);
+    font-size: 32px;
+    margin: 0 0 6px;
+}
+
+.work-card-meta p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.work-card-meta p i {
+    color: var(--accent-color);
+    margin-right: 6px;
+}
+
+.work-card-meta em {
+    display: inline-block;
+    margin-top: 14px;
+    font-style: normal;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--white-color);
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 4px;
+}
+
+.works-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 20px 0 40px;
+    padding: 32px 36px;
+    background: var(--primary-color);
+}
+
+.works-cta h3 {
+    color: var(--white-color);
+    margin-bottom: 8px;
+}
+
+.works-cta p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.works-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+body.project-viewer-open {
+    overflow: hidden;
+}
+
+body.project-viewer-open .whatsapp-float {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.project-viewer {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 20px;
+    background: rgba(12, 16, 16, 0.94);
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.project-viewer.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.project-viewer-panel {
+    position: relative;
+    width: min(1120px, 100%);
+    margin: 40px auto;
+    padding: 48px 40px 40px;
+    background: #111718;
+    border: 1px solid rgba(196, 146, 87, 0.25);
+}
+
+.project-viewer-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: transparent;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.project-viewer-close:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.project-viewer-head {
+    max-width: 640px;
+    margin-bottom: 32px;
+    padding-right: 48px;
+}
+
+.project-viewer-head span {
+    display: inline-block;
+    color: var(--accent-color);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.project-viewer-head h2 {
+    color: var(--white-color);
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.project-viewer-head p {
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 8px;
+}
+
+.project-viewer-head p i {
+    color: var(--accent-color);
+    margin-right: 6px;
+}
+
+.project-viewer-blurb {
+    margin-top: 12px !important;
+}
+
+.viewer-photo {
+    position: relative;
+    display: block;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.viewer-photo img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.viewer-photo:hover img {
+    transform: scale(1.04);
+}
+
+.viewer-photo span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 16px 14px 12px;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.7));
+    color: var(--white-color);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.project-viewer-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.project-viewer.is-open ~ .mfp-bg,
+.mfp-bg {
+    z-index: 2600;
+}
+
+.mfp-wrap {
+    z-index: 2610;
+}
+
+@media only screen and (max-width: 991px) {
+    .works-cta {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 28px 24px;
+    }
+
+    .work-card-meta h2,
+    .project-viewer-head h2 {
+        font-size: 28px;
+    }
+
+    .project-viewer-panel {
+        padding: 36px 20px 24px;
+        margin: 20px auto;
     }
 }
