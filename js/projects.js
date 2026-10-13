@@ -33,10 +33,10 @@
 		},
 		'pizza-hut': {
 			client: 'Pizza Hut',
-			location: 'Bangalore',
+			location: 'Kannur, Kerala',
 			type: 'Commercial',
 			scope: 'Restaurant interior',
-			blurb: 'Commercial restaurant interiors delivered for Pizza Hut.',
+			blurb: 'Commercial restaurant interiors delivered for Pizza Hut in Kannur, Kerala.',
 			images: [
 				{ file: 'pizza-hut-2.jpg', caption: 'Dining booths' },
 				{ file: 'pizza-hut-1.jpg', caption: 'Dining hall' },

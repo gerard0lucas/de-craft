@@ -154,6 +154,19 @@
         });
     }
 
+    if ($('.google-reviews-slider').length) {
+        new Swiper('.google-reviews-slider .swiper', {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            loop: true,
+            speed: 900,
+            autoplay: {
+                delay: 2800,
+                disableOnInteraction: false
+            }
+        });
+    }
+
     /* testimonial Slider JS */
     if ($('.testimonial-slider').length) {
         const testimonial_slider = new Swiper('.testimonial-slider .swiper', {
