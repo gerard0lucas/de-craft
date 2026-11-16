@@ -1,6 +1,6 @@
 (function () {
 	var img = function (file) {
-		return 'images/projects/' + encodeURIComponent(file);
+		return 'images/projects/' + String(file).split('/').map(encodeURIComponent).join('/');
 	};
 
 	var PROJECTS = {
@@ -74,6 +74,27 @@
 				{ file: 'WhatsApp Image 2026-09-06 at 12.20.25 AM (2).jpeg', caption: 'Upholstered headboard' },
 				{ file: 'WhatsApp Image 2026-09-06 at 12.20.27 AM (1).jpeg', caption: 'Hydraulic storage' }
 			]
+		},
+		priyanka: {
+			client: 'Priyanka',
+			location: 'Barasat, Kolkata',
+			type: 'Residential',
+			scope: 'Bedroom, living & balcony',
+			blurb: 'A complete home interior in Barasat, Kolkata — bedroom suite, living alcove, study and a lit balcony lounge.',
+			images: [
+				{ file: 'nalini/WhatsApp Image 2026-11-16 at 8.59.52 AM (1).jpeg', caption: 'Arch to bedroom' },
+				{ file: 'nalini/WhatsApp Image 2026-11-16 at 8.59.49 AM.jpeg', caption: 'Master bedroom' },
+				{ file: 'nalini/WhatsApp Image 2026-11-16 at 8.59.50 AM (1).jpeg', caption: 'Bedroom feature wall' },
+				{ file: 'nalini/WhatsApp Image 2026-11-16 at 8.59.51 AM (1).jpeg', caption: 'Bedroom' },
+				{ file: 'nalini/WhatsApp Image 2026-11-16 at 8.59.51 AM.jpeg', caption: 'Living alcove' },
+				{ file: 'nalini/WhatsApp Image 2026-11-16 at 8.59.50 AM (2).jpeg', caption: 'Seating nook' },
+				{ file: 'nalini/WhatsApp Image 2026-11-16 at 8.59.50 AM.jpeg', caption: 'Dressing niche' },
+				{ file: 'nalini/WhatsApp Image 2026-11-16 at 8.59.48 AM (1).jpeg', caption: 'Study unit' },
+				{ file: 'nalini/WhatsApp Image 2026-11-16 at 8.59.52 AM.jpeg', caption: 'Display shelves' },
+				{ file: 'nalini/WhatsApp Image 2026-11-16 at 8.59.47 AM.jpeg', caption: 'Balcony swing' },
+				{ file: 'nalini/WhatsApp Image 2026-11-16 at 8.59.48 AM.jpeg', caption: 'Balcony lounge' },
+				{ file: 'nalini/WhatsApp Image 2026-11-16 at 8.59.47 AM (1).jpeg', caption: 'Balcony seating' }
+			]
 		}
 	};
 
@@ -102,10 +123,13 @@
 		var delay = 0.15;
 		Object.keys(PROJECTS).forEach(function (id) {
 			var project = PROJECTS[id];
+			if (!project.images || !project.images.length) {
+				return;
+			}
 			var cover = img(project.images[0].file);
 			var typeClass = project.type.toLowerCase();
 			html +=
-				'<div class="col-lg-6 works-item ' + typeClass + '">' +
+				'<div class="col-lg-4 col-md-6 works-item ' + typeClass + '">' +
 					'<button type="button" class="work-card wow fadeInUp" data-wow-delay="' + delay + 's" data-project="' + id + '" aria-label="Open ' + project.client + ' project">' +
 						'<figure class="work-card-image">' +
 							'<img src="' + cover + '" alt="' + project.client + ' — ' + project.location + '">' +
